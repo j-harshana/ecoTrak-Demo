@@ -1,0 +1,107 @@
+body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
+      color: white;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      min-height: 100vh;
+      background: url('Assets/background.jpg') no-repeat center center fixed;
+      background-size:cover;
+      backdrop-filter: blur(10px);
+    }
+
+    .logo {
+      margin-top: 30px;
+      margin-bottom: 20px;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+    }
+
+    .logo-icon {
+      height: 80px;
+    }
+
+    .dashboard {
+      width: 90%;
+    }
+
+    .title {
+      text-align: center;
+      font-size: 2em;
+      color: white;
+      margin-bottom: 30px;
+    }
+
+    .title span {
+      color: #00ff7f;
+      font-weight: bold;
+    }
+
+    .card-group {
+      display: flex;
+      flex-direction: row;
+      justify-content: center;
+      gap: 40px;
+      flex-wrap: wrap;
+    }
+
+    .chart-card {
+      width: 600px;
+      background: rgba(255, 255, 255, 0.1);
+      backdrop-filter: blur(10px);
+      border-radius: 15px;
+      padding: 20px;
+      box-shadow: 0 0 15px rgba(0, 255, 0, 0.2);
+      display: flex;
+      flex-direction: column;
+      height: auto;
+
+    }
+
+    canvas {
+      width: 100% !important;
+      height: auto !important;
+      aspect-ratio: 2 / 1;
+    }
+
+    .stat {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-top: 10px;
+      font-size: 16px;
+      white-space: nowrap;
+    }
+
+    .stat span {
+      flex-shrink: 0;
+    }
+
+    .stat strong {
+      font-size: 18px;
+      color: white;
+      flex-shrink: 0;
+      margin-left: 10px;
+    }
+
+    .logout-button {
+      display: block;
+      margin: 30px auto;
+      padding: 10px 20px;
+      font-size: 18px;
+      background-color: red;
+      color: white;
+      border: none;
+      border-radius: 10px;
+      cursor: pointer;
+    }
+    @media screen and (max-width: 600px) {
+    .chart-card {
+      width: 100%;
+      padding: 10px;
+    }
+}

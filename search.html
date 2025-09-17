@@ -1,0 +1,45 @@
+<!--page gets the vehicle number that need to show details about-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <link rel= "icon" type="image/x-icon" href="Assets/favicon.png">
+  <title>ecoTrack - Vehicle Register Number</title>
+  <link rel="stylesheet" href="searchstyles.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Baloo+Bhai+2&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+</head>
+<body>
+  <div class="container">
+    <!--ecotrack logo with bookmark to homepage-->
+     <div class="logo">
+         <a href="https://eco-trak-otagles-projects.vercel.app/"><img src="Assets/logo.png" class="logo-icon" alt="ecoTrak Logo"></a>
+      </div>
+    <div class="form-container">
+        <div class="back-square">
+            <h2>Vehicle Registration Number</h2>
+        </div>
+        <div class="front-square">
+            <div class="in-front-sq">
+                <label for="vehicleNumber">Vehicle Number</label>
+                <div class="input-wrapper">
+                    <img src="Assets/car.svg" class="car-icon">
+                    <input type="text" id="licensePlate" placeholder="Enter registration number">
+                </div>
+            </div> 
+            <button id="loginBtn" class="enter-btn">ENTER</button>
+            <p id="message"></p>
+        </div>
+      </div>      
+  </div>
+    <!-- -------------------------------firebase configurations----------------------------------------------------------------- -->
+  <!-- Firebase SDKs (v8) -->
+  <script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-app.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-auth.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-database.js"></script>
+  <script src="firebaseConnect.js"></script>
+ <!-- ---------------------------------------EO-firebase config--------------------------------------------------------- -->
+</body>
+</html>

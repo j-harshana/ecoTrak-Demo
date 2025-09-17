@@ -1,0 +1,172 @@
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+  }
+  
+  body {
+  background: url('Assets/background.jpg') no-repeat center center fixed;
+  background-size:cover;
+  height:100dvh;
+  font-family: 'Baloo Bhai 2', cursive;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0;
+  backdrop-filter: blur(10px);
+  }
+
+  .container {
+  text-align: center;
+   width: auto;
+   height: auto;
+  }
+  
+  .logo {
+  position: fixed;
+  left: 20%;
+  right: 20%;
+  top: 20px;
+  z-index: 3;
+  }
+  
+  .logo-icon {
+    width: 100%;
+   max-width: 250px;
+   height: auto;
+  }
+
+  .back-square,
+  .front-square {
+  position: absolute;
+  inset: 0px;
+  width: 50rem;
+  max-width: 90vw;
+  max-height: 100dvh;
+  min-width: 50vw;
+  min-height: auto;
+  margin-top: 130px;
+  margin-left: auto;
+  margin-right: auto;
+  border-radius: 111px;
+  border-color: rgba(255, 255, 255, 0.5);
+  }
+  
+  .back-square {
+    background: linear-gradient(to bottom , rgba(255, 255, 255, 0.7), rgba(153, 153, 153,0) 95%);
+   padding: 20px;
+   z-index: 1;
+   display: flex;
+   flex-direction: column;
+   gap: 10px;
+   height: 35rem;
+   backdrop-filter: blur(5px);
+  }
+  
+  .front-square {
+    background: linear-gradient(to bottom , rgba(255, 255, 255), rgba(153, 153, 153, 0.12) 25%);
+   top: 75px;
+   z-index: 2;
+   backdrop-filter: blur(2px);
+   height: 30rem;
+    
+  }
+  
+  .back-square h2 {
+    font-size: 2.7rem;
+    font-family: 'Inter';
+    font-weight: 500;
+    color: #397C30;
+    text-align: center;
+    margin: 0;
+    text-shadow: 0 0 4px rgba(0, 0, 0, 0.25);
+  }
+  
+  .input-wrapper {
+    display: flex;
+    font-size: 1.2rem;
+    align-items: center;
+    margin-top: 20px;
+  }
+  
+ .car-icon {
+    margin-right: 8px;
+    color: #15803d;
+    width: 35px;
+  }
+  
+  input[type="text"] {
+    flex: 1;
+    border: none;
+    outline: none;
+    background: transparent;
+    font-size: 1rem;
+  }
+  
+  .enter-btn {
+    align-self: center;
+    padding: 8px 20px;
+    background-color: rgba(255, 255, 255, 0.1);
+    color: #1D7E0A;
+    border: solid #4EF037;
+    border-radius: 20px;
+    font-weight: bold;
+    box-shadow: 0 4px 13px rgba(0,0,0,0.3);
+    transition: background 0.3s ease;
+    cursor: pointer;
+  }
+  
+  .enter-btn:hover {
+    background-color: #178b08;
+    color: white;
+  }
+
+  .front-square label{
+    font-family: 'Inter',sans-serif;
+    font-size: 25px;
+    color: #1D7E0A;
+    text-shadow: 0, 2, 6px rgba(0,0,0,0.25);
+    font-weight: 400;
+  }
+
+  .in-front-sq{
+    margin-left: 178px;
+    margin-top: 127px;
+    width: 50%;
+    height: fit-content;
+    justify-content: left;
+    text-align: left;
+    border-bottom: 2px solid #004002;
+    margin-bottom: 20px;
+  }
+  @media screen and (max-width: 750px) {
+
+ .in-front-sq{
+   margin: 60px auto 10px auto;
+   width: 50%;
+   height:auto;
+   justify-content: left;
+   text-align: left;
+   margin-bottom: 10px;
+ }
+ .back-square {
+   height: 38rem;
+  }
+  
+  .front-square {
+    background: linear-gradient(to bottom , rgba(255, 255, 255), rgba(153, 153, 153, 0.12) 25%);
+   top: 7.5rem;
+   z-index: 2;
+   backdrop-filter: blur(2px);
+   height: 30rem;
+    
+  }
+  .back-square h2 {
+    font-size: 1.8rem;
+  }
+  .front-square label{
+    font-size: 1.3rem;
+  }
+
+}

@@ -1,0 +1,88 @@
+<!-- This page is the landing page of thw website-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="indexstyles.css">
+  <link rel= "icon" type="image/x-icon" href="Assets/favicon.png">
+  <script src="https://kit.fontawesome.com/ac910ed75d.js" crossorigin="anonymous"></script>
+  <title>ecoTrak – Smart Vehicle Emission Detection System</title> <!--title of the page -->
+  <script>
+    document.addEventListener("DOMContentLoaded", function () { 
+//added a event listner to listen to page actions
+      const sections = document.querySelectorAll(".section");//select al with class section
+      const observer = new IntersectionObserver(entries => { //intersectio oberser to animation trigger
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add("visible");
+          }
+        });
+      }, { threshold: 0.1 });
+//visibilit check for sections
+      sections.forEach(section => {
+        observer.observe(section);
+      });
+    });
+  </script>
+</head>
+<body>
+  <div class = main>
+	  <!-- Logo, slogan, and navigation button container-->
+    <div class="hero">
+      <div class="hero-content">
+        <img src="Assets/logo.png" alt="ecoTrak Logo" id = "logo">
+        <h1>Smart Vehicle Emission Detection System</h1>
+        <p>Track and analyze CO and HC emissions to create a greener future.</p>
+	      <!--buttons-->
+        <div class="button-group">
+          <a href="aboutUs.html">About Us</a>
+          <a href="login.html">Log In</a>
+        </div>
+      </div>
+    </div>
+
+	  <!--introduction section-->
+    <div class="section">
+      <h2 class = "autoShow">Introduction</h2>
+      <p class = "autoShow">ecoTrak is a smart emissions monitoring system that empowers users to track carbon monoxide (CO) and hydrocarbon (HC) levels emitted from vehicles. It helps raise environmental awareness and supports decision-making through real-time data analytics and historical trends.</p>
+    </div>
+
+	  <!--set up objectives, mission, vision -->
+    <div class="section">
+      <h2 class = "autoShow">Objectives</h2>
+	  <ul class = "autoShow">
+	  <li>Tracking vehicle emissions in real time</li>
+	  <li>Storing emission data in the cloud for future analysis</li>
+	  <li>Alerting when levels exceed safety limits</li> 
+	  <li>Promoting eco-friendly transportation practices</li>
+    </ul>
+    </div>
+
+    <div class="section">
+      <h2 class = "autoShow">Mission</h2>
+      <p class = "autoShow">To provide a reliable, accessible, and intelligent solution that enables individuals and authorities to monitor, analyze, and reduce vehicular emissions effectively.</p>
+    </div>
+
+    <div class="section">
+      <h2 class = "autoShow">Vision</h2>
+      <p class = "autoShow">To drive the transition toward a sustainable future where technology actively supports environmental protection and public health through smart monitoring and data-driven insights.</p>
+    </div>
+    <footer>
+	
+		  <hr>
+		  <div class = "section">
+			  <h3>Contact us</h3>
+			  <a href = "mailto:contact.ecotrak@gmail.com"><i class="fa-solid fa-envelope"></i></a>
+        <a href = "https://x.com/eco-Trak"><i class="fa-brands fa-x-twitter"></i></a><br><br>
+        <p></p>contact.ecotrak@gmail.com</p>
+        <p>@eco-Trak</p>
+		  </div>
+		  <div>
+			  <p>@copy 2025 eco-Trak. All Rights Reserved.</p>
+		  </div>
+		
+	  </footer>
+  </div>
+</body>
+</html>

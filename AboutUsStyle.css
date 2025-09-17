@@ -1,0 +1,188 @@
+/*imort fonts*/
+@import url('https://fonts.googleapis.com/css2?family=Cal+Sans&family=Lexend:wght@100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Tuffy:ital,wght@0,400;0,700;1,400;1,700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Monospace';
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;;
+    min-height: 100vh;
+    background: url('Assets/background.jpg') no-repeat center center fixed;
+    background-size: cover;
+    padding:20px;
+    position: relative;
+
+}
+
+/* Overlay effect for darkening the background image */
+body::before {
+    content: "";
+    position: fixed;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.6);
+    z-index: -1;/*place behind content*/
+}
+
+img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    opacity: 0.9;
+}
+
+.logo {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
+
+
+}
+
+.logo-icon {
+    max-width: 120px;
+    height: auto;
+    max-width: 300px;
+
+}
+
+/* Card container */
+.wrapper .card_Container {
+    
+    display: flex;
+    justify-content: center;
+    align-items: stretch;
+    flex-wrap: wrap;
+    gap: 20px;
+   max-width: 100%;
+  width: 100%;
+  padding-left: 16px;
+  padding-right: 16px;
+  margin: 0 auto;
+  box-sizing: border-box;
+}
+
+/* Individual card */
+.card_Container .card {
+    flex: 1 1 100%;
+    max-width: 300px;
+    max-width: 280px;
+    aspect-ratio: 6 / 9;
+    margin: 10px;
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 30px 30px -20px rgb(0, 0, 0),
+                inset 0 0 0 1000px rgba(255, 255, 255, 0.6);
+    position: relative;
+    transition: transform 0.3s ease, z-index 0.3s ease;
+}
+
+.card:hover {
+    transform: scale(1.05);
+    z-index: 5;
+}
+
+/* Image box */
+.card .imbBx, .card .imbBx img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* Content slides up half the card */
+.card .content {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 50%;
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background: rgba(41, 123, 59, 0.65);
+    backdrop-filter: blur(5px);
+    color: white;
+    transform: translateY(100%);
+    transition: transform 0.4s ease-in-out, opacity 0.4s ease-in-out;
+    z-index: 2;
+    opacity: 0;
+}
+
+.card:hover .content {
+    transform: translateY(0%);
+    opacity: 1;
+}
+
+/* Text inside card */
+.content .contentBx h3 {
+    color: #fff;
+    letter-spacing: 1px;
+    font-weight: 500;
+    font-size: clamp(12px, 2.5vw, 16px);
+    text-align: center;
+    line-height: 1.3em;
+    margin-bottom: 10px;
+    opacity: 0;
+    transition: opacity 0.5s ease;
+}
+
+.card:hover .content .contentBx h3 {
+    opacity: 1;
+}
+
+.content .contentBx h3 span {
+    font-size: 12px;
+    text-transform: none;
+    font-family: 'Monospace';
+}
+
+h5, h6 {
+    font-family: 'Times New Roman', Times, serif;
+    font-weight: normal;
+}
+
+/* Social icons */
+.content .sci {
+    display: flex;
+    gap: 15px;
+    margin-top: 10px;
+}
+
+.content .sci li {
+    list-style: none;
+    opacity: 0;
+    transition: opacity 0.5s ease;
+}
+
+.card:hover .content .sci li {
+    opacity: 1;
+}
+
+.content .sci li a {
+    color: #ffffff;
+    font-size: 18px;
+    text-shadow: 0 0 30px rgb(0, 0, 0);
+}
+
+/* Footer */
+footer{
+    color: white;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    display: block;
+
+}
+footer p{
+    font-size: 12px;
+    margin-top: 40px;
+}
+

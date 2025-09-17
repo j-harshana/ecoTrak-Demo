@@ -1,0 +1,169 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+html {
+  scroll-behavior: smooth;
+}
+body {
+  font-family: 'Segoe UI', sans-serif;
+  background: url('Assets/background.jpg') no-repeat center center fixed;
+  background-size: cover;
+  color: #fff;
+}
+.main {
+  background-color: rgba(0, 0, 0, 0.5);
+}
+#logo{
+    width: 100%;
+    max-width: 500px;
+    height: auto;
+    margin-bottom: 20px; 
+    animation: fadeIn 1.5s ease-in-out;
+}
+.hero {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  position: relative;
+}
+.hero-content {
+  position: relative;
+  z-index: 1;
+  max-width: 800px;
+  padding: 0 20px;
+  animation: fadeIn 2s ease-in-out;
+}
+.hero h1 {
+  font-size: 2.5rem;
+  font-weight: bold;
+  margin-bottom: 20px;
+  animation: slideUp 1.2s ease-in-out;
+}
+.hero p {
+  font-size: 1.25rem;
+  margin-bottom: 30px;
+  animation: fadeIn 2.2s ease-in-out;
+}
+.button-group {
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+  flex-wrap: wrap;
+  animation: fadeIn 2.4s ease-in-out;
+}
+.button-group a {
+  background-color: white;
+  color: #111;
+  padding: 12px 24px;
+  font-size: 1rem;
+  border-radius: 30px;
+  text-decoration: none;
+  transition: background 0.3s ease;
+  font-weight: bold;
+}
+.button-group a:hover {
+  background-color: #ddd;
+}
+.footer-location {
+  position: absolute;
+  bottom: 20px;
+  right: 20px;
+  color: #fff;
+  font-size: 0.9rem;
+  animation: fadeIn 3s ease-in-out;
+}
+
+.section {
+  padding: 60px 20px;
+  text-align: center;
+  opacity: 0;
+}
+.section.visible {
+  opacity: 1;
+  transform: scale(1);
+}
+.section h2 {
+  font-size: 2.1rem;
+  margin-bottom: 20px;
+  color: #ffffff;
+}
+.section p {
+  max-width: 800px;
+  margin: auto;
+  font-size: 1.2rem;
+  line-height: 1.6;
+  color: #ccc;
+}
+ul{
+  font-size: 1.2rem;
+  text-align: justify;
+}
+.section ul{
+  display: inline-block;
+  text-align: left;
+  max-width: 800px;
+  margin: auto;
+  font-size: 1.2rem;
+  line-height: 1.6;
+  color: #ccc;
+}
+.autoShow{
+  animation: autoShowAnimation both;
+  animation-timeline: view(70% 5%);
+}
+  @keyframes autoShowAnimation{
+  from{
+    opacity: 0;
+    transform: translateY(200px) scale(0.3);
+  }to{
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@keyframes slideUp {
+  from { transform: translateY(40px); opacity: 0; }
+  to { transform: translateY(0); opacity: 1; }
+}
+
+footer{
+  background-color: transparent;
+  color: white;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  display: block;
+}
+
+footer p{
+    font-size: 12px;
+    margin-top: 40px;
+}
+
+footer a{
+    font-size: 30px;
+    text-decoration: none;
+    color: white;
+    margin-left: 20px;
+    transition: text-shadow 0.4s;
+}
+
+footer a:hover{
+    text-shadow: 0 0 20px white;
+}
+
+@media screen and (max-width: 700px){
+  .hero-content h1{
+    font-size: 2rem;
+  }
+}

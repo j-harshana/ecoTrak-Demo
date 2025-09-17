@@ -1,0 +1,63 @@
+<!--Page validates the user against users recorded in the database-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <link rel= "icon" type="image/x-icon" href="Assets/favicon.png">
+  <title>ecoTrack - Login</title>
+	<!-- linking the CSS files -->
+  <link rel="stylesheet" href="loginstyle.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Baloo+Bhai+2&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+</head>
+<body>
+  <div class="container">
+      <div class="logo">
+         <a href="https://eco-trak-otagles-projects.vercel.app/"><img src="Assets/logo.png" class="logo-icon" alt="ecoTrak Logo"></a>
+      </div>
+
+    <div class="form-container">
+        <div class="back-square">
+            <h2>Login</h2>
+        </div>
+        <div class="front-square">
+            <div class="in-front-sq">
+		    <!-- Login form-->
+		<form id = "loginForm" >
+                	<label for="username">Username</label>
+                 	 <div class="input-wrapper">
+                     		<img src="Assets/user.svg" class="user-icon">
+                    		<input type="email" id="email" placeholder="Email" required />
+                   	</div>
+
+                	<label for="password">Password</label>
+                  	<div class="input-wrapper">
+                    		<img src="Assets/lock.svg" class="lock-icon">
+                     		<input type="password" id="password" placeholder="Password" required />
+                  	</div>
+	    		</div>
+		
+            		<div class="button">
+               			<button type = "submit" id="loginBtn" class="enter-btn">LOGIN</button>
+            		</div>
+			<div class="error" id="message"></div>
+		</form>
+	    
+            <div class="signup-text">
+		    <!--set up google sign-in-->
+               <p>Or Sign Up Using</p>
+               <a href="#" onclick="loginWithGoogle(); return false;"><img src="Assets/google.svg" class = "google-icon" alt="Login with Google"/></a>
+	       <p id="message2"></p>
+            </div>
+        </div>
+      </div>      
+  </div>
+  <!-- Firebase v8 SDKs -->
+  <script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-app.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-auth.js"></script>
+<!-- get auth.js-->
+  <script src="auth.js"></script>
+</body>
+</html>
